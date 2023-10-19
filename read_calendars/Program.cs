@@ -21,8 +21,6 @@ RestResponse response = client.Execute(request);
 var content = JsonDocument.Parse(response.Content);
 var data = content.RootElement.GetProperty("data");
 
-Console.WriteLine(data);
-
 foreach(var calendar in data.EnumerateArray())
 {
     //Console.WriteLine(calendar.GetProperty("id"));
